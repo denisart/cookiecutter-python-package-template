@@ -1,0 +1,9 @@
+{
+  "project_name": "Package Name",
+  "directory_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+  "version": "0.1.0",
+  "short_description": "A short description of the package.",
+  "maintainer_name": "<First Name> <Last Name>",
+  "maintainer_email": "<maintainer>@<domen>"
+}
