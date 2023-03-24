@@ -6,7 +6,7 @@ Clone your fork and cd into the repo directory
 
 ```bash
 git clone git@github.com:<your username>/{{ cookiecutter.directory_name }}.git
-cd {{ cookiecutter.repo_directory_namename }}
+cd {{ cookiecutter.directory_name }}
 ```
 
 ## Step 2.
