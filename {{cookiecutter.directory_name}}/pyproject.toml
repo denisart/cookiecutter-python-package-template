@@ -1,0 +1,102 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "{{ cookiecutter.repo_name }}/__version__.py"
+
+[project]
+name = "{{ cookiecutter.repo_name }}"
+description = "{{ cookiecutter.short_description }}"
+readme = "README.md"
+authors = [
+    {name = "{{ cookiecutter.maintainer_name }}", email = "{{ cookiecutter.maintainer_email }}"},
+]
+keywords = [
+    "python",
+    # ...
+]
+license = "MIT"
+classifiers = [
+    #
+    # All classifiers: https://pypi.org/classifiers/
+    #
+    # Development Status :: 1 - Planning,
+    # Development Status :: 2 - Pre-Alpha,
+    # Development Status :: 3 - Alpha,
+    # Development Status :: 4 - Beta,
+    # "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    # "Programming Language :: Python :: 3.7",
+    # "Programming Language :: Python :: 3.8",
+    # "Programming Language :: Python :: 3.9",
+    # "Programming Language :: Python :: 3.10",
+    # "Programming Language :: Python :: 3.11",
+    # "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+# requires-python = ">=3.8"
+dependencies = [
+    # ...
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "<Your home page>"
+Documentation = "<Documentation page>"
+Source = "<Source page>"
+
+[project.optional-dependencies]
+# all requirements for linting, building and etc.
+dev = [
+    "mypy",
+    "ruff",
+    "black",
+    "isort",
+    # ...
+]
+
+# all requirements for tests
+test = [
+    "pytest",
+    "pytest-mock",
+    "pytest-cov",
+    # ...
+]
+
+# all requirements for docs generation
+docs = [
+    "sphinx",
+    "sphinx_rtd_theme",
+    "sphinx-argparse",
+    "sphinxcontrib-github",
+    # ...
+]
+
+[tool.isort]
+py_version={{ cookiecutter.py_version }}
+multi_line_output = 3
+line_length = 120
+
+[tool.ruff]
+line-length = 120
+flake8-quotes = {inline-quotes = 'single', multiline-quotes = 'double'}
+mccabe = { max-complexity = 14 }
+isort = {}
+target-version = "py{{ cookiecutter.py_version }}"
+
+exclude = [
+    # ...
+]
+
+[tool.black]
+color = true
+line-length = 120
+target-version = ['py{{ cookiecutter.py_version }}']
+skip-string-normalization = true
+
+exclude = [
+    # ...
+]

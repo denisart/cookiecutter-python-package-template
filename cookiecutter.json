@@ -1,5 +1,6 @@
 {
   "project_name": "Package Name",
+  "py_version": "310",
   "directory_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
   "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
   "version": "0.1.0",

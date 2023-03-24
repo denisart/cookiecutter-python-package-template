@@ -30,6 +30,7 @@ and answer to the following questions
 
 ```
 project_name [Package Name]: Your package name
+py_version [310]: 310
 version [0.0.1]: Init version for package
 short_description [A short description of the package.]:
 maintainer_name [<First Name> <Last Name>]:
